@@ -1,0 +1,47 @@
+let sec=0
+let pause = false
+
+function start() {
+    setInterval(watch, 1000)
+}
+
+// function pause() {
+//     console.log('Pausou')
+// }
+
+// function stop() {
+//     console.log('Parou')
+// }
+
+function watch() {
+    if (!pause) {
+       sec++
+       document.getElementById('watch').innerText=sec
+    }
+}
+
+function onStart() {
+     pause = false
+//    alert('start')
+}
+
+function onZerar() {
+    sec = 0
+    document.getElementById('watch').innerText=sec
+    // alert('zerar')
+}
+
+function onPause() {
+    pause = true
+    // alert('pause')
+}
+
+
+
+function initApp() {
+    start()
+    // alert('iniciando app')
+    // document.getElementById('start-btn').innerText=sec
+    // document.getElementById('pause-btn').innerText=sec
+    // document.getElementById('start-btn').innerText=sec
+}
